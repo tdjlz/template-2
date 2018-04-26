@@ -13,28 +13,40 @@ body{
 		background-image: url("img/background.png");
 		background-repeat: no-repeat;
 		background-position: center top;
-
-
 	}
 
 }
 
+//contant
+
+#contant{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 //header
 
-#header{
-	height: 100px;
+.head{
 	max-width:100%;
 	width:100%;
 	margin: 0 auto;
 	text-align: center;
+	margin-bottom: 30px;
+	@include breakpoint($tablet-bp){
+		height: 135px;
+	}
+	@include breakpoint($start){
+		height: 100px;
+	}
 }
 
 #logo-container{
-	@include span(1 of 3);
+	width:170px;
 	height:100px;
+	text-align: center;
 	@include breakpoint($tablet-bp){
+
 		float: left;
-		
 	}
 
 	@include breakpoint($start){
@@ -78,7 +90,7 @@ body{
 		width:90%;
 		height: 900px;
 	}
-	margin: 0 auto;
+	margin: 0 5%;
 }
 
 
@@ -267,7 +279,6 @@ body{
 .section-4{
 	@extend .section-1;
 	margin-top:20px;
-	margin:0 auto;
 	height: 700px;
 }
 
@@ -395,7 +406,7 @@ body{
 	@include breakpoint($tablet-bp){
 		width:760px;
 	}
-	margin: 0 auto;
+	margin: 0 5%;
 	margin-top:150px;
 	display: block;
 }
@@ -446,31 +457,30 @@ body{
 
 //footer
 
-#footer{
+.footer{
 	@include breakpoint($tablet-bp){
-		height:250px;
+		height:300px;
 	}
 	@include breakpoint($start){
-		height:400px;
+		height:300px;
 	}
 	position:relative;
 	width:100%;
-	height:250px;
 	background-color:black;
 }
 
 #footer-left{
 	position:absolute;
 	@include breakpoint($tablet-bp){
-		top:60px;
+		top:50px;
 		left:50px;
-		height:200px;
+		height:180px;
 		width:50%;
 	}
 	@include breakpoint($start){
 		top:30px;
-		left: 20px;
-		height: 300px;
+		left: 5px;
+		height: 200px;
 		width:90%;
 	}
 }
@@ -478,15 +488,21 @@ body{
 #footer-left-title{
 	color:white;
 	position:absolute;
-	left:10px;
+	left:5px;
 	font-size: 25px;
 	margin: 0 0;
 }
 
 #footer-left-text{
+	@include breakpoint($tablet-bp){
+		height:101px;
+	}
+	@include breakpoint($start){
+		top: 20px;
+		left: 5px;
+	}
 	position:absolute;
-	left:101px;
-	bottom:60px;
+	bottom:20px;
 	color:white;
 	margin:0;
 	line-height: 5px;
@@ -494,12 +510,19 @@ body{
 }
 
 #footer-left-acorn{
-	margin-top:90px;
+	@include breakpoint($tablet-bp){
+		margin-top:90px;
+	}
+	@include breakpoint($start){
+		margin-top:20px;
+	}
 	font-size: 30px;
+	margin-bottom: 0;
 }
 
 #footer-left-slogan{
 	font-size: 15px;
+	margin: 5px 0;
 }
 
 #acron-logo{
@@ -518,11 +541,17 @@ body{
 }
 
 #footer-right{
-	float: right;;
-	width:40%;
+	@include breakpoint($tablet-bp){
+		float: right;
+	}
+	@include breakpoint($start){
+		float: left;
+		margin-left: 5px;
+	}
+	margin-top:270px;
+	width:250px;
 	right:10px;
 	color: white;
 	left: auto;
-	margin-top:220px;
 	font-size:15;
 }

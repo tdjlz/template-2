@@ -1,8 +1,6 @@
 <?php get_header();?>
-
-
 <body>
-        <div id="header">
+ <div class="head">
          <!-- START header PHP variables -->
          <?php $logo_image = get_theme_mod('logo_image'); ?>
             <!-- END header PHP variables -->
@@ -15,8 +13,11 @@
             <div id="about-us-1">
             <p>ABOUT</p>
             </div>
+</div>
 
-        </div>
+
+
+  <div  id="contant">
 
         <div class="section-1">
             <!-- START Section 1 PHP variables -->
@@ -226,8 +227,8 @@
             </form>
 
         </div>
-
-        <div id="footer">
+    </div>
+     <div class="footer">
                 <div id="footer-left">
                         <h3 id="footer-left-title">Made by</h3>
                         <div id="footer-left-text">
@@ -239,6 +240,7 @@
                     <div id="footer-right">
                         <h6>Terms & conditions &nbsp;@&nbsp;2017</h6>
                     </div>
-        </div>
+</div>
+
     </body>
 </html>

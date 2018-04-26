@@ -14,19 +14,27 @@ body {
       background-repeat: no-repeat;
       background-position: center top; } }
 
-#header {
-  height: 100px;
+#contant {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.head {
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .head {
+      height: 135px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    .head {
+      height: 100px; } }
 
 #logo-container {
-  width: 26.66667%;
-  float: left;
-  margin-left: 3.33333%;
-  margin-right: 3.33333%;
-  height: 100px; }
+  width: 170px;
+  height: 100px;
+  text-align: center; }
   @media (min-width: 768px) {
     #logo-container {
       float: left; } }
@@ -55,7 +63,7 @@ body {
     display: none; } }
 
 .section-1, .section-2, .section-3, .section-4 {
-  margin: 0 auto; }
+  margin: 0 5%; }
   @media (min-width: 768px) {
     .section-1, .section-2, .section-3, .section-4 {
       width: 760px;
@@ -218,7 +226,6 @@ body {
 
 .section-4 {
   margin-top: 20px;
-  margin: 0 auto;
   height: 700px; }
 
 #text-container-4 {
@@ -319,7 +326,7 @@ body {
       width: 90%; } }
 
 .contact {
-  margin: 0 auto;
+  margin: 0 5%;
   margin-top: 150px;
   display: block; }
   @media (min-width: 0px) and (max-width: 767px) {
@@ -366,54 +373,66 @@ body {
   margin-top: 30px;
   margin-bottom: 50px; }
 
-#footer {
+.footer {
   position: relative;
   width: 100%;
-  height: 250px;
   background-color: black; }
   @media (min-width: 768px) {
-    #footer {
-      height: 250px; } }
+    .footer {
+      height: 300px; } }
   @media (min-width: 0px) and (max-width: 767px) {
-    #footer {
-      height: 400px; } }
+    .footer {
+      height: 300px; } }
 
 #footer-left {
   position: absolute; }
   @media (min-width: 768px) {
     #footer-left {
-      top: 60px;
+      top: 50px;
       left: 50px;
-      height: 200px;
+      height: 180px;
       width: 50%; } }
   @media (min-width: 0px) and (max-width: 767px) {
     #footer-left {
       top: 30px;
-      left: 20px;
-      height: 300px;
+      left: 5px;
+      height: 200px;
       width: 90%; } }
 
 #footer-left-title {
   color: white;
   position: absolute;
-  left: 10px;
+  left: 5px;
   font-size: 25px;
   margin: 0 0; }
 
 #footer-left-text {
   position: absolute;
-  left: 101px;
-  bottom: 60px;
+  bottom: 20px;
   color: white;
   margin: 0;
   line-height: 5px; }
+  @media (min-width: 768px) {
+    #footer-left-text {
+      height: 101px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    #footer-left-text {
+      top: 20px;
+      left: 5px; } }
 
 #footer-left-acorn {
-  margin-top: 90px;
-  font-size: 30px; }
+  font-size: 30px;
+  margin-bottom: 0; }
+  @media (min-width: 768px) {
+    #footer-left-acorn {
+      margin-top: 90px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    #footer-left-acorn {
+      margin-top: 20px; } }
 
 #footer-left-slogan {
-  font-size: 15px; }
+  font-size: 15px;
+  margin: 5px 0; }
 
 #acron-logo {
   position: absolute;
@@ -430,13 +449,19 @@ body {
       display: none; } }
 
 #footer-right {
-  float: right;
-  width: 40%;
+  margin-top: 270px;
+  width: 250px;
   right: 10px;
   color: white;
   left: auto;
-  margin-top: 220px;
   font-size: 15; }
+  @media (min-width: 768px) {
+    #footer-right {
+      float: right; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    #footer-right {
+      float: left;
+      margin-left: 5px; } }
 
 html {
   font-size: 14pt !important; }
