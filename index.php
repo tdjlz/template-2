@@ -217,13 +217,18 @@
 
             <form name="contact-form" method="get">
                 <h6><?php echo $contact_option_1; ?></h6>
-                <input type="text" name="name" class="input-box">
+                <input type="text" name="name" class="input-box" id="username">
                 <h6><?php echo $contact_option_2; ?></h6>
                 <input type="text" name="organization" class="input-box">
                 <h6><?php echo $contact_option_3; ?></h6>
                 <input type="email" name="email" class="input-box">
-                <input type="submit" name="submit" class="submit-button" value="Send">
-
+                <input type="submit" name="submit" class="submit-button" value="Send" onclick="inputcomfrim()">
+                <script>
+                function inputcomfrim(){
+                    var username = document.getElementById("username").value;
+                    window.alert(username +" ,Thank you, we will contact you asap!");
+                }
+                </script>
             </form>
 
         </div>
