@@ -225,7 +225,7 @@
                 <input type="text" name="organization" class="input-box">
                 <h6><?php echo $contact_option_3; ?></h6>
                 <input type="email" name="email" class="input-box">
-                <input type="submit" name="submit" class="submit-button" value="Send" onclick="inputcomfrim()">
+                <input type="submit" name="submit" class="submit-button" value="Send">
                 <script>
                 function validateForm(){
                     var x=document.forms["contact-form"]["name"].value;
@@ -233,13 +233,11 @@
                         alert("Please input your name");
                         return false;
                     }
-                }
-
-                function inputcomfrim(){
+                    else{
                     var username = document.getElementById("username").value;
                     window.alert(username +" ,Thank you, we will contact you asap!");
+                    }
                 }
-
                 </script>
             </form>
 
