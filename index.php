@@ -3,6 +3,7 @@
  <div class="head">
          <!-- START header PHP variables -->
          <?php $logo_image = get_theme_mod('logo_image'); ?>
+         <?php $footer_logo_image = get_theme_mod('footer_logo_image'); ?>
             <!-- END header PHP variables -->
             <div id="logo-container">
                 <img id="logo" src="<?php echo $logo_image; ?>">
@@ -26,6 +27,8 @@
             <?php $section_1_description = get_theme_mod('section_1_description'); ?>
             <?php $appstore_download_link = get_theme_mod('appstore_download_link');?>
             <?php $googleplay_download_link = get_theme_mod('googleplay_download_link');?>
+            <?php $appstore_down_img = get_theme_mod('appstore_download_img');?>
+            <?php $googleplay_down_img = get_theme_mod('googleplay_download_img');?>
             <!-- END Section 1 PHP variables -->
             <div id="text-container-1-mobile">
                 <div class="title-1">
@@ -38,12 +41,12 @@
                 <div class="download-links-container">
                     <div class="app-store-link">
                         <a href="<?php echo $appstore_download_link; ?>">
-                            <img src="img/AppStore.png" alt=""/>
+                            <img src="<?php echo $appstore_down_img; ?>" alt=""/>
                         </a>
                     </div>
                     <div class="google-play-link">
                         <a href="<?php echo $googleplay_download_link; ?>">
-                             <img src="img/googleapp.png" alt=""/>
+                             <img src="<?php echo $googleplay_down_img; ?>" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -63,12 +66,12 @@
                 <div class="download-links-container">
                     <div class="app-store-link">
                         <a href="<?php echo $appstore_download_link; ?>">
-                            <img src="img/AppStore.png" alt=""/>
+                            <img src="<?php echo $appstore_down_img; ?>" alt=""/>
                         </a>
                     </div>
                     <div class="google-play-link">
                         <a href="<?php echo $googleplay_download_link; ?>">
-                             <img src="img/googleapp.png" alt=""/>
+                             <img src="<?php echo $googleplay_down_img; ?>" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -182,12 +185,12 @@
             <div class="download-links-container" style="margin:0 auto;">
                     <div class="app-store-link">
                         <a href="<?php echo $appstore_download_link; ?>">
-                            <img src="img/AppStore.png" alt=""/>
+                            <img src="<?php echo $appstore_down_img; ?>" alt=""/>
                         </a>
                     </div>
                     <div class="google-play-link">
                         <a href="<?php echo $googleplay_download_link; ?>">
-                             <img src="img/googleapp.png" alt=""/>
+                             <img src="<?php echo $googleplay_down_img; ?>" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -215,7 +218,7 @@
                 </h2>
             </div>
 
-            <form name="contact-form" method="get">
+            <form name="contact-form" method="get" onsubmit="return validateForm()">
                 <h6><?php echo $contact_option_1; ?></h6>
                 <input type="text" name="name" class="input-box" id="username">
                 <h6><?php echo $contact_option_2; ?></h6>
@@ -224,10 +227,19 @@
                 <input type="email" name="email" class="input-box">
                 <input type="submit" name="submit" class="submit-button" value="Send" onclick="inputcomfrim()">
                 <script>
+                function validateForm(){
+                    var x=document.forms["contact-form"]["name"].value;
+                    if (x==null|| x==""){
+                        alert("Please input your name");
+                        return false;
+                    }
+                }
+
                 function inputcomfrim(){
                     var username = document.getElementById("username").value;
                     window.alert(username +" ,Thank you, we will contact you asap!");
                 }
+
                 </script>
             </form>
 
@@ -240,7 +252,7 @@
                             <h1 id="footer-left-acorn">ACORN</h1>
                             <h3 id="footer-left-slogan">Redefining the future of healthcare</h3>
                         </div>
-                        <img id="acron-logo" src="img/acorn-logo.jpg">
+                        <img id="acron-logo" src="<?php echo $footer_logo_image;?>">
                     </div>
                     <div id="footer-right">
                         <h6>Terms & conditions &nbsp;@&nbsp;2017</h6>

@@ -17,11 +17,37 @@ function download_link_options( $wp_customize ) {
 
     $wp_customize->add_setting('googleplay_download_link',array());
 
+    $wp_customize->add_setting( 'appstore_download_img', array() );
+
+    $wp_customize->add_setting( 'googleplay_download_img', array() );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control(
+      $wp_customize,
+      'appstore_img_control',
+      array(
+           'label' => __('app store Image', 'mytheme'),
+           'section' => 'download_link_section',
+           'settings' => 'appstore_download_img',
+           'priority' => 10
+      )
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Image_Control(
+        $wp_customize,
+        'googleplay_img_control',
+        array(
+             'label' => __('google play Image', 'mytheme'),
+             'section' => 'download_link_section',
+             'settings' => 'googleplay_download_img',
+             'priority' => 20
+        )
+      ));
+
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'appstore_download_link_control', array(
         'label'      => __( 'appstore download link', 'mytheme' ),
         'section'    => 'download_link_section',
         'settings'   => 'appstore_download_link',
-        'priority' => 20,
+        'priority' => 30,
         'type' => 'text')
     ));
 
@@ -29,7 +55,7 @@ function download_link_options( $wp_customize ) {
         'label'      => __( 'googleplay download link', 'mytheme' ),
         'section'    => 'download_link_section',
         'settings'   => 'googleplay_download_link',
-        'priority' => 30,
+        'priority' => 40,
         'type' => 'text')
     ));
 }
